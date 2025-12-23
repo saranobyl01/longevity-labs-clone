@@ -8,6 +8,8 @@ import { CartProvider } from "@/contexts/CartContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+import ProductDetail from "./pages/ProductDetail";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -20,6 +22,7 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
