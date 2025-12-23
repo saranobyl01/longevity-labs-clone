@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Beaker, Pill, FlaskConical, Droplets } from "lucide-react";
 
 const categories = [
-  { name: "Peptide Vials", icon: Beaker, href: "#peptide-vials" },
-  { name: "Peptide Capsules", icon: Pill, href: "#peptide-capsules" },
-  { name: "Bioregulator Vials", icon: FlaskConical, href: "#bioregulator-vials" },
-  { name: "Bioregulator Capsules", icon: Pill, href: "#bioregulator-capsules" },
-  { name: "Bioregulator Creams", icon: Droplets, href: "#bioregulator-creams" },
+  { name: "Peptide Vials", icon: Beaker, image: "/peptide-vials.png", href: "#peptide-vials" },
+  { name: "Peptide Capsules", icon: Pill, image: "/peptide-capsules.png", href: "#peptide-capsules" },
+  { name: "Bioregulator Vials", icon: FlaskConical, image: "/bioregulator-vials.png", href: "#bioregulator-vials" },
+  { name: "Bioregulator Capsules", icon: Pill, image: "/bioregulator-capsules.jpg", href: "#bioregulator-capsules" },
+  { name: "Bioregulator Creams", icon: Droplets, image: "/bioregulator-creams.png", href: "#bioregulator-creams" },
 ];
 
 export const CategorySection = () => {
@@ -30,8 +30,16 @@ export const CategorySection = () => {
               className="group"
             >
               <div className="bg-card border border-border rounded-xl p-6 text-center hover:border-primary hover:shadow-card-hover transition-all duration-300 h-full">
-                <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/10 transition-colors">
-                  <category.icon className="h-8 w-8 text-primary" />
+                <div className="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/10 transition-colors overflow-hidden">
+                  {category.image ? (
+                    <img 
+                      src={category.image} 
+                      alt={category.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <category.icon className="h-8 w-8 text-primary" />
+                  )}
                 </div>
                 <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                   {category.name}

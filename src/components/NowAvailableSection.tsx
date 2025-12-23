@@ -1,11 +1,11 @@
 import { ProductCard, Product } from "./ProductCard";
-
 const nowAvailableProducts: Product[] = [
   {
     id: "follistatin",
     name: "Follistatin (FLGR242) (10mg)",
     priceRange: "799.00 – 9,588.00",
     action: "waitlist",
+    image: "/follistatin.png",
   },
   {
     id: "klotho",
@@ -13,18 +13,21 @@ const nowAvailableProducts: Product[] = [
     priceRange: "799.00 – 9,588.00",
     salePriceRange: "479.40 – 5,752.80",
     action: "selectOptions",
+    image: "/klotho.png",
   },
   {
     id: "klotho-follistatin-bundle",
     name: "Klotho (alphaKlothoLR) / Follistatin (FLGR242) bundle",
     priceRange: "1,199.00 – 14,388.00",
     action: "waitlist",
+    image: "/klotho-follistatin-bundle.png",
   },
   {
     id: "klotho-follistatin-female",
     name: "Klotho (alphaKlothoLR) / Follistatin Female Bundle",
     priceRange: "1,799.00 – 10,794.00",
     action: "waitlist",
+    image: "/klotho-female-bundle.png",
   },
 ];
 

@@ -100,11 +100,19 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-card-hover transition-all duration-300 group">
       {/* Image */}
       <div className="aspect-square bg-secondary relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-24 h-24 bg-muted rounded-xl flex items-center justify-center">
-            <span className="text-4xl">🧪</span>
+        {product.image ? (
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-24 h-24 bg-muted rounded-xl flex items-center justify-center">
+              <span className="text-4xl">🧪</span>
+            </div>
           </div>
-        </div>
+        )}
         {product.salePrice || product.salePriceRange ? (
           <div className="absolute top-3 left-3 bg-sale text-sale-foreground text-xs font-bold px-2 py-1 rounded">
             SALE

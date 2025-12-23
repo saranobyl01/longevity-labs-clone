@@ -9,6 +9,7 @@ const featuredCapsules: Product[] = [
     priceRange: "349.97 – 799.97",
     salePriceRange: "209.98 – 479.98",
     action: "selectOptions",
+    image: "/shredmax.png",
   },
   {
     id: "biozapetite",
@@ -16,6 +17,7 @@ const featuredCapsules: Product[] = [
     regularPrice: 249.97,
     salePrice: 149.98,
     action: "addToCart",
+    image: "/biozapetite.png",
   },
   {
     id: "bioignite",
@@ -23,6 +25,7 @@ const featuredCapsules: Product[] = [
     regularPrice: 399.97,
     salePrice: 239.98,
     action: "addToCart",
+    image: "/bioignite.png",
   },
   {
     id: "bioabsorb",
@@ -30,6 +33,7 @@ const featuredCapsules: Product[] = [
     regularPrice: 199.97,
     salePrice: 119.98,
     action: "addToCart",
+    image: "/bioabsorb.png",
   },
   {
     id: "bioamp",
@@ -37,43 +41,44 @@ const featuredCapsules: Product[] = [
     regularPrice: 299.00,
     salePrice: 179.40,
     action: "addToCart",
+    image: "/bioamp.png",
   },
-  {
-    id: "bioampmax",
-    name: "BioAmpMax",
-    regularPrice: 450.00,
-    salePrice: 270.00,
-    action: "addToCart",
-  },
-  {
-    id: "bioflow",
-    name: "BioFlow",
-    regularPrice: 169.97,
-    salePrice: 101.98,
-    action: "addToCart",
-  },
-  {
-    id: "biogutpro",
-    name: "BioGutPro – 60 capsules (research use only)",
-    regularPrice: 299.97,
-    salePrice: 179.98,
-    action: "waitlist",
-  },
-  {
-    id: "biomind",
-    name: "BioMind",
-    regularPrice: 349.97,
-    salePrice: 209.98,
-    action: "addToCart",
-  },
-  {
-    id: "biorestore",
-    name: "BioRestore – 60 capsules",
-    description: "BPC-157-AS, Palmitoylethanolamide, Sodium-Bicarbonate, Hyaluronic Acid",
-    regularPrice: 179.97,
-    salePrice: 107.98,
-    action: "addToCart",
-  },
+  // {
+  //   id: "bioampmax",
+  //   name: "BioAmpMax",
+  //   regularPrice: 450.00,
+  //   salePrice: 270.00,
+  //   action: "addToCart",
+  // },
+  // {
+  //   id: "bioflow",
+  //   name: "BioFlow",
+  //   regularPrice: 169.97,
+  //   salePrice: 101.98,
+  //   action: "addToCart",
+  // },
+  // {
+  //   id: "biogutpro",
+  //   name: "BioGutPro – 60 capsules (research use only)",
+  //   regularPrice: 299.97,
+  //   salePrice: 179.98,
+  //   action: "waitlist",
+  // },
+  // {
+  //   id: "biomind",
+  //   name: "BioMind",
+  //   regularPrice: 349.97,
+  //   salePrice: 209.98,
+  //   action: "addToCart",
+  // },
+  // {
+  //   id: "biorestore",
+  //   name: "BioRestore – 60 capsules",
+  //   description: "BPC-157-AS, Palmitoylethanolamide, Sodium-Bicarbonate, Hyaluronic Acid",
+  //   regularPrice: 179.97,
+  //   salePrice: 107.98,
+  //   action: "addToCart",
+  // },
 ];
 
 export const FeaturedCapsulesSection = () => {
