@@ -12,6 +12,8 @@ import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
 import { Helmet } from "react-helmet-async";
 
+import { PromotionalSection } from "@/components/PromotionalSection";
+
 const Index = () => {
   return (
     <>
@@ -30,6 +32,7 @@ const Index = () => {
         <Header />
         <main>
           <HeroSection />
+          <PromotionalSection />
           <CategorySection />
           <QualitySection />
           <NowAvailableSection />
