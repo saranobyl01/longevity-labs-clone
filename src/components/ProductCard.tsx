@@ -97,9 +97,9 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   };
 
   return (
-    <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-card-hover transition-all duration-300 group">
+    <div className="h-full flex flex-col bg-card rounded-xl border border-border overflow-hidden hover:shadow-card-hover transition-all duration-300 group">
       {/* Image */}
-      <div className="aspect-square bg-secondary relative overflow-hidden">
+      <div className="aspect-square bg-secondary relative overflow-hidden flex-shrink-0">
         {product.image ? (
           <img 
             src={product.image} 
@@ -121,8 +121,8 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       </div>
 
       {/* Content */}
-      <div className="p-4">
-        <h3 className="font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+      <div className="p-4 flex flex-col flex-1">
+        <h3 className="font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors min-h-[3rem]">
           {product.name}
         </h3>
         {product.description && (
@@ -130,8 +130,10 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             {product.description}
           </p>
         )}
-        <div className="mb-4">{renderPrice()}</div>
-        {renderButton()}
+        <div className="mt-auto">
+          <div className="mb-4">{renderPrice()}</div>
+          {renderButton()}
+        </div>
       </div>
     </div>
   );
