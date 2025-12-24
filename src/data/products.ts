@@ -29,6 +29,9 @@ export interface Product {
     noteItems?: string[];
     presale?: string;
     showBacWater?: boolean;
+    benefitsHeader?: string;
+    benefits?: string[];
+    availability?: string;
 }
 
 export const products: Product[] = [
@@ -160,25 +163,45 @@ export const products: Product[] = [
     },
     {
         id: "biozapetite",
-        name: "BioZapetite – 90 capsules",
+        name: "BioZapetite",
         regularPrice: 249.97,
         salePrice: 149.98,
         action: "addToCart",
         image: "/biozapetite.png",
         images: ["/biozapetite.png"],
         category: "Peptide Capsules",
-        brand: "BioLongevity Labs"
+        brand: "BioLongevity Labs",
+        longDescription: "BioZapetite delivers orforglipron (6 mg), a first-in-class oral, small-molecule GLP-1 receptor agonist designed for investigational use. Unlike peptide GLP-1 agonists, orforglipron is orally bioavailable without fasting or water restrictions and demonstrates robust pharmacology in glucose and weight regulation.",
+        benefitsHeader: "Together, its mechanisms are designed to:",
+        benefits: [
+            "Promote glucose disposal & insulin sensitivity",
+            "Drive weight reduction & appetite control",
+            "Improve lipid & cardiometabolic health",
+            "Provide oral dosing convenience",
+            "Exhibit a safety profile consistent with injectable GLP-1 medicines."
+        ],
+        availability: "In stock",
+        sku: "SUPP-BIOZEP"
     },
     {
         id: "bioignite",
-        name: "BioIgnite – 90 capsules",
+        name: "BioIgnite",
         regularPrice: 399.97,
         salePrice: 239.98,
         action: "addToCart",
         image: "/bioignite.png",
         images: ["/bioignite.png"],
         category: "Peptide Capsules",
-        brand: "BioLongevity Labs"
+        brand: "BioLongevity Labs",
+        longDescription: "BioIgnite is an integrated metabolic-activation formula that combines a thermogenic amino acid, a neurostimulant alkaloid, an inflammation-modulating kinase inhibitor, and a selective β2-adrenergic agonist. Together they are designed to:",
+        benefits: [
+            "Enhance thermogenesis & fat oxidation",
+            "Improve glucose disposal & insulin sensitivity",
+            "Reduce metabolic inflammation",
+            "Amplify mitochondrial energy metabolism"
+        ],
+        availability: "In stock",
+        sku: "SUPP-BIOIGN"
     },
     {
         id: "bioabsorb",
@@ -189,18 +212,24 @@ export const products: Product[] = [
         image: "/bioabsorb.png",
         images: ["/bioabsorb.png"],
         category: "Peptide Capsules",
-        brand: "BioLongevity Labs"
+        brand: "BioLongevity Labs",
+        longDescription: "BioAbsorb is an integrated metabolic research formula that pairs low-dose metformin and highly bio-available dihydroberberine with activated B-complex cofactors.",
+        availability: "In stock",
+        sku: "SUPP-BIOABS"
     },
     {
         id: "bioamp",
-        name: "BioAmp – 45 capsules",
+        name: "BioAmp",
         regularPrice: 299.00,
         salePrice: 179.40,
         action: "addToCart",
         image: "/bioamp.png",
         images: ["/bioamp.png"],
         category: "Peptide Capsules",
-        brand: "BioLongevity Labs"
+        brand: "BioLongevity Labs",
+        longDescription: "BioAmp is a targeted metabolic-support formula featuring a single, high-potency dose of the pan-AMPK activator ATX-304 (OS-01). For laboratory research use only.",
+        availability: "In stock",
+        sku: "SUPP-BMP"
     },
     {
         id: "weightloss",

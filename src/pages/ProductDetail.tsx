@@ -126,8 +126,28 @@ const ProductDetail = () => {
             <h1 className="text-3xl font-bold text-primary mb-6">{product.name}</h1>
             
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              {product.longDescription || product.description}
+              {product.longDescription ? (
+                // Render description with bold text if it contains HTML-like bolding or just plain text
+                <span dangerouslySetInnerHTML={{ 
+                  __html: product.longDescription.replace(/orforglipron \(6 mg\)/g, '<strong>orforglipron (6 mg)</strong>')
+                                                 .replace(/first-in-class oral, small-molecule GLP-1 receptor agonist/g, 'first-in-class <strong>oral, small-molecule GLP-1 receptor agonist</strong>')
+                 }} />
+              ) : (product.description)}
             </p>
+
+            {product.benefitsHeader && (
+              <p className="text-foreground mb-4">{product.benefitsHeader}</p>
+            )}
+
+            {product.benefits && (
+              <ul className="list-disc pl-5 mb-8 space-y-2">
+                {product.benefits.map((benefit, index) => (
+                  <li key={index} className="text-foreground font-bold text-sm">
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {product.note && (
               <p className={`text-foreground mb-4 ${product.noteItems ? 'font-bold underline text-sm' : 'font-bold'}`}>
@@ -150,6 +170,12 @@ const ProductDetail = () => {
             )}
 
             {renderPrice()}
+
+            {product.availability && (
+               <p className="font-bold mb-6">
+                 Availability: <span className="text-green-500 font-normal">{product.availability}</span>
+               </p>
+            )}
 
             {/* Product Specific Options */}
             {product.weight && (
