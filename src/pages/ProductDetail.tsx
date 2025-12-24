@@ -125,15 +125,13 @@ const ProductDetail = () => {
           <div>
             <h1 className="text-3xl font-bold text-primary mb-6">{product.name}</h1>
             
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <div className="text-muted-foreground mb-6 leading-relaxed">
               {product.longDescription ? (
-                // Render description with bold text if it contains HTML-like bolding or just plain text
-                <span dangerouslySetInnerHTML={{ 
-                  __html: product.longDescription.replace(/orforglipron \(6 mg\)/g, '<strong>orforglipron (6 mg)</strong>')
-                                                 .replace(/first-in-class oral, small-molecule GLP-1 receptor agonist/g, 'first-in-class <strong>oral, small-molecule GLP-1 receptor agonist</strong>')
-                 }} />
-              ) : (product.description)}
-            </p>
+                <div dangerouslySetInnerHTML={{ __html: product.longDescription }} />
+              ) : (
+                <p>{product.description}</p>
+              )}
+            </div>
 
             {product.benefitsHeader && (
               <p className="text-foreground mb-4">{product.benefitsHeader}</p>

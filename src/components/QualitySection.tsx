@@ -33,58 +33,67 @@ const testingMethods = [
 
 export const QualitySection = () => {
   return (
-    <section className="py-16 bg-secondary/50">
+    <section className="py-20 bg-blue-50/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-            The Biolongevity Labs Quality Standard
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            The Biolongevity Labs Quality <span className="text-primary">Standard</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-primary font-medium text-lg max-w-3xl mx-auto">
             Buy USA Made research-grade peptides online with verified purity for in vitro applications
           </p>
         </div>
 
-        {/* Third-Party Testing */}
-        <div className="bg-card rounded-2xl border border-border p-8 mb-8">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Award className="h-6 w-6 text-primary" />
+        <div className="bg-white rounded-3xl p-8 shadow-sm border border-blue-100 mb-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Image */}
+            <div className="rounded-2xl overflow-hidden h-[400px]">
+              <img 
+                src="/about-research-grade.png" 
+                alt="Scientist conducting research" 
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-foreground mb-2">
-                Third-Party Verified Purity
-              </h3>
-              <p className="text-muted-foreground">
-                Every batch undergoes independent testing by certified labs. No exceptions.
-              </p>
+
+            {/* Right Column: Content */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-3">
+                  Third-Party Verified Purity: <span className="font-normal text-muted-foreground">Every batch undergoes independent testing by certified labs. No exceptions.</span>
+                </h3>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-4">
+                  Advanced Analytical Testing:
+                </h3>
+                <ul className="space-y-4">
+                  {testingMethods.map((method, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">{method}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-
-          <h4 className="font-semibold text-foreground mb-4">
-            Advanced Analytical Testing:
-          </h4>
-          <ul className="space-y-3">
-            {testingMethods.map((method, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                <span className="text-muted-foreground">{method}</span>
-              </li>
-            ))}
-          </ul>
         </div>
 
-        {/* Quality Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Stamps Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {qualityFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="bg-card rounded-xl border border-border p-6 hover:shadow-card transition-shadow"
+              className="flex flex-col items-center text-center space-y-4"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <feature.icon className="h-6 w-6 text-primary" />
+              <div className="w-24 h-24 rounded-full border-2 border-primary/20 flex items-center justify-center bg-white shadow-sm mb-2 group hover:border-primary transition-colors duration-300">
+                <feature.icon className="h-10 w-10 text-primary stroke-[1.5]" />
               </div>
-              <h3 className="font-bold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
+              <h3 className="font-bold text-foreground text-lg">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-[250px] mx-auto">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

@@ -171,7 +171,7 @@ export const products: Product[] = [
         images: ["/biozapetite.png"],
         category: "Peptide Capsules",
         brand: "BioLongevity Labs",
-        longDescription: "BioZapetite delivers orforglipron (6 mg), a first-in-class oral, small-molecule GLP-1 receptor agonist designed for investigational use. Unlike peptide GLP-1 agonists, orforglipron is orally bioavailable without fasting or water restrictions and demonstrates robust pharmacology in glucose and weight regulation.",
+        longDescription: "BioZapetite delivers <strong>orforglipron (6 mg)</strong>, a first-in-class <strong>oral, small-molecule GLP-1 receptor agonist</strong> designed for investigational use. Unlike peptide GLP-1 agonists, orforglipron is orally bioavailable without fasting or water restrictions and demonstrates robust pharmacology in glucose and weight regulation.",
         benefitsHeader: "Together, its mechanisms are designed to:",
         benefits: [
             "Promote glucose disposal & insulin sensitivity",
@@ -240,7 +240,19 @@ export const products: Product[] = [
         image: "/trulyrx-bottle.png",
         images: ["/trulyrx-bottle.png"],
         category: "Peptide Capsules",
-        brand: "Truly Rx"
+        brand: "Truly Rx",
+        description: "Clinically studied medications that help support healthy, sustainable weight management.",
+        benefits: [
+            "Ongoing Provider Care & Support",
+            "Syringes & Alcohol Pads Kit",
+            "Platform Access & Educational Content"
+        ],
+        options: [
+            {
+                label: "Supply",
+                values: ["1 Month Supply", "3 Month Supply", "6 Month Supply", "12 Month Supply"]
+            }
+        ]
     },
     {
         id: "hairloss",
@@ -251,7 +263,35 @@ export const products: Product[] = [
         image: "/trulyrx-bottle.png",
         images: ["/trulyrx-bottle.png"],
         category: "Peptide Capsules",
-        brand: "Truly Rx"
+        brand: "Truly Rx",
+        description: "Thicker hair solutions for women of all ages.",
+        longDescription: `
+            <p class="mb-4">Thicker hair solutions for women of all ages.</p>
+            
+            <p class="font-bold mb-2">MINOXIDIL 1MG / SPIRONOLACTONE 60MG CAPSULES</p>
+            <ul class="list-disc pl-5 mb-4 space-y-1">
+                <li>Hair Loss For Women of Any Age</li>
+                <li>Custom Compounded Blend</li>
+                <li>Dermatologist Formulated</li>
+            </ul>
+
+            <p class="font-bold mb-2">FINASTERIDE 0.1% / MINOXIDIL 6% TOPICAL SOLUTION</p>
+            <ul class="list-disc pl-5 mb-4 space-y-1">
+                <li>Safe for Post-Menopausal Women</li>
+                <li>Custom Topical Application</li>
+                <li>Dermatologist Formulated</li>
+            </ul>
+        `,
+        options: [
+            {
+                label: "Medication",
+                values: ["Capsules (Minoxidil/Spironolactone)", "Topical Solution (Finasteride/Minoxidil)"]
+            },
+            {
+                label: "Supply",
+                values: ["1 Month Supply", "3 Month Supply", "6 Month Supply", "12 Month Supply"]
+            }
+        ]
     },
     {
         id: "sermorelin",
@@ -262,7 +302,21 @@ export const products: Product[] = [
         image: "/trulyrx-bottle.png",
         images: ["/trulyrx-bottle.png"],
         category: "Peptide Capsules",
-        brand: "Truly Rx"
+        brand: "Truly Rx",
+        description: "Age Smarter. Live Stronger.",
+        benefits: [
+            "Stimulates natural HGH production",
+            "Improves fat metabolism and muscle tone",
+            "Enhances skin elasticity and hydration",
+            "Supports deeper, more restorative sleep",
+            "Boosts recovery from exercise and injury"
+        ],
+        options: [
+            {
+                label: "Supply",
+                values: ["1 Month Supply", "3 Month Supply"]
+            }
+        ]
     },
     {
         id: "nad",
@@ -273,7 +327,20 @@ export const products: Product[] = [
         image: "/trulyrx-bottle.png",
         images: ["/trulyrx-bottle.png"],
         category: "Peptide Capsules",
-        brand: "Truly Rx"
+        brand: "Truly Rx",
+        description: "Enhance energy levels, mental clarity & mood by supporting DNA health",
+        benefitsHeader: "Benefits of NAD+",
+        benefits: [
+            "Maintaining healthy NAD+ levels slows down the aging process",
+            "May reduce your risk for chronic age-related disease",
+            "Boost healthy metabolism, gene expression & DNA repair",
+            "Enhances energy levels, mental clarity & mood by supporting DNA health",
+            "Promotes brain & immune cell functioning throughout the aging process",
+            "Effective in reducing cravings & fatigue while improving post-workout recovery",
+            "Delivers benefits faster than other methods at a fraction of the cost of infusions",
+            "Compounded & made-to-order by a certified pharmacy",
+            "Tested for purity by US-licensed pharmacies"
+        ]
     },
     {
         id: "glutathione",
@@ -284,7 +351,22 @@ export const products: Product[] = [
         image: "/trulyrx-bottle.png",
         images: ["/trulyrx-bottle.png"],
         category: "Peptide Capsules",
-        brand: "Truly Rx"
+        brand: "Truly Rx",
+        description: "Experience the potential age-restoring benefits of Glutathione!",
+        longDescription: `
+            <p class="mb-4">Experience the potential age-restoring benefits of Glutathione!</p>
+            <p class="mb-4">Neutralizes reactive oxygen species (ROS), reducing oxidative stress and inflammation—key drivers of aging and chronic disease.</p>
+            
+            <p class="font-bold mb-2">DETOXIFICATION SUPPORT</p>
+            <ul class="list-disc pl-5 mb-4 space-y-1">
+                <li>Conjugates and removes toxins, heavy metals, and environmental pollutants via phase II liver detoxification.</li>
+            </ul>
+
+            <p class="font-bold mb-2">MITOCHONDRIAL & IMMUNE OPTIMIZATION</p>
+            <ul class="list-disc pl-5 mb-4 space-y-1">
+                <li>Protects mitochondrial DNA and boosts immune system function, especially under physical or environmental stress.</li>
+            </ul>
+        `
     }
 ];
 
