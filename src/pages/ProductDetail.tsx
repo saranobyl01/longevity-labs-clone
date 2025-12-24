@@ -129,6 +129,26 @@ const ProductDetail = () => {
               {product.longDescription || product.description}
             </p>
 
+            {product.note && (
+              <p className={`text-foreground mb-4 ${product.noteItems ? 'font-bold underline text-sm' : 'font-bold'}`}>
+                {product.note}
+              </p>
+            )}
+
+            {product.noteItems && (
+              <ul className="list-disc pl-5 mb-6 space-y-2">
+                {product.noteItems.map((item, index) => (
+                  <li key={index} className="text-foreground font-bold text-sm">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {product.presale && (
+              <p className="font-bold text-orange-500 mb-6">{product.presale}</p>
+            )}
+
             {renderPrice()}
 
             {/* Product Specific Options */}
@@ -162,7 +182,7 @@ const ProductDetail = () => {
             <div className="h-px bg-border my-8" />
 
             {/* Add to Cart Actions */}
-            {product.id === "follistatin" && (
+            {(product.id === "follistatin" || product.showBacWater) && (
               <div className="mb-8 p-4 bg-secondary/10 rounded-xl border border-secondary/20">
                  <h4 className="font-bold text-primary mb-4">Don't forget your BAC Water</h4>
                  <div className="flex items-center gap-4">

@@ -25,6 +25,10 @@ export interface Product {
     }[];
     researchInfo?: string; // HTML or long text
     coas?: string[]; // Links to PDF or images
+    note?: string;
+    noteItems?: string[];
+    presale?: string;
+    showBacWater?: boolean;
 }
 
 export const products: Product[] = [
@@ -59,6 +63,7 @@ export const products: Product[] = [
     {
         id: "klotho",
         name: "Klotho (alphaKlothoLR) (20mcg)",
+        description: "Research-grade klotho protein (a-Klotho) for in vitro studies. 99%+ purity with full analytical documentation for laboratory applications.",
         priceRange: "799.00 – 9,588.00",
         salePriceRange: "479.40 – 5,752.80",
         regularPrice: 799.00,
@@ -68,27 +73,64 @@ export const products: Product[] = [
         images: ["/klotho.png"],
         category: "Bioregulators",
         sku: "KLOTHO-20MCG",
-        brand: "BioLongevity Labs"
+        brand: "BioLongevity Labs",
+        note: "1 month supply = 2x 10mcg vials",
+        presale: "** This is a pre-sale. Expected to ship no later than 12/15",
+        showBacWater: true,
+        options: [
+            {
+                label: "Quantity",
+                values: ["1 Month Supply", "3 Month Supply", "6 Month Supply", "12 Month Supply"]
+            }
+        ]
     },
     {
         id: "klotho-follistatin-bundle",
-        name: "Klotho (alphaKlothoLR) / Follistatin (FLGR242) bundle",
+        name: "Klotho (alphaKlothoLR) / Follistatin (FLGR242)",
+        description: "Research-grade klotho protein (a-Klotho) and Follistatin glycoprotein for in vitro studies. 99%+ purity with full documentation for laboratory applications.",
         priceRange: "1,199.00 – 14,388.00",
-        action: "waitlist",
+        regularPrice: 1199.00,
+        action: "selectOptions",
         image: "/klotho-follistatin-bundle.png",
         images: ["/klotho-follistatin-bundle.png"],
         category: "Bundles",
-        brand: "BioLongevity Labs"
+        brand: "BioLongevity Labs",
+        note: "1 month supply:",
+        noteItems: [
+            "2x 10mcg vials of Klotho",
+            "2x 5mg vials of Follistatin"
+        ],
+        sku: "KLO-FOLLI-4PK",
+        options: [
+            {
+                label: "Quantity",
+                values: ["1 Month Supply", "3 Month Supply", "6 Month Supply", "12 Month Supply"]
+            }
+        ]
     },
     {
         id: "klotho-follistatin-female",
         name: "Klotho (alphaKlothoLR) / Follistatin Female Bundle",
+        description: "Research-grade klotho protein (a-Klotho) and Follistatin glycoprotein for in vitro studies. 99%+ purity with full documentation for laboratory applications.",
         priceRange: "1,799.00 – 10,794.00",
-        action: "waitlist",
+        regularPrice: 1799.00,
+        action: "selectOptions",
         image: "/klotho-female-bundle.png",
         images: ["/klotho-female-bundle.png"],
         category: "Bundles",
-        brand: "BioLongevity Labs"
+        brand: "BioLongevity Labs",
+        note: "2 month supply:",
+        noteItems: [
+            "4x 10mcg vials of Klotho",
+            "2x 5mg vials of Follistatin"
+        ],
+        sku: "KLO-FOLLI-FEM-6PK",
+        options: [
+            {
+                label: "Quantity",
+                values: ["2 Month Supply", "4 Month Supply", "6 Month Supply", "12 Month Supply"]
+            }
+        ]
     },
 
     // Featured Capsules Section

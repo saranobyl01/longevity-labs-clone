@@ -6,8 +6,6 @@ interface ProductTabsProps {
 }
 
 export const ProductTabs = ({ product }: ProductTabsProps) => {
-  if (!product.peptideInfo && !product.longDescription) return null;
-
   return (
     <div className="mt-16">
       <Tabs defaultValue="description" className="w-full">
